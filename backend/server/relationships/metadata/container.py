@@ -18,3 +18,11 @@ class Container:
             "copyright": copyright,
             "authors": authors
         }
+
+    def encode(self):
+
+        return {
+            "data": self.data,
+            "errors": self.errors,
+            "metadata": self.metadata
+        }
