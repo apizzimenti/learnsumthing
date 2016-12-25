@@ -2,9 +2,9 @@
 
 class Student:
 
-    def __init__(self, name="", school={}, sections=[], votes=[0, 0], posts=[], comments=[], messages=[], bio={}):
+    def __init__(self, school_id, name="", sections=[], votes=[0, 0], posts=[], comments=[], messages=[], bio={}):
         self.name = name
-        self.school = school
+        self.school_id = school_id
         self.sections = sections
         self.votes = votes
         self.posts = posts
@@ -21,5 +21,6 @@ class Student:
             "posts": [post.encode() for post in self.posts],
             "comments": [comment.encode() for comment in self.comments],
             "messages": [message.encode() for message in self.messages],
-            "bio": self.bio
+            "bio": self.bio,
+            "school_id": self.school_id
         }
