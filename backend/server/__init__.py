@@ -22,6 +22,7 @@ def main(global_config, **settings):
     config.add_route("home", '/')
     # student
     config.add_route("student_GET", "/student", request_method="GET")
+    config.add_route("student_POST", "/student", request_method="POST")
     config.add_route("school_GET", "/school", request_method="GET")
     config.add_route("school_POST", "/school", request_method="POST")
     config.scan(".views")
